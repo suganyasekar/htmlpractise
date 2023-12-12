@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body> 
+    <header class="video-header">
+    <video id="myVideo" autoplay>
+        <source id="mp4_src" src="./video/20180910_222141.mp4" type="video/mp4">
+    </video>
+    <h1>Video Project</h1>
+    <button class="switch-btn">
+        <span id="Play-btn">Play</span>
+        <span id="Pause-btn">Pause</span>
+        <span id="switch" class="switch"></span>
+    </button>
+</header>
+
+    <script>
+        const video = document.getElementById("myVideo");
+        const play = document.getElementById("Play-btn");
+        const pause = document.getElementById("Pause-btn");
+        const slider = document.getElementById("switch");
+
+        play.addEventListener("click",function(){
+            video.play();
+            slider.classList.remove("slide");
+        })
+        pause.addEventListener("click",function(){
+            video.pause();
+            slider.classList.add("slide");
+        })
+    </script>
+</body>
+</html>

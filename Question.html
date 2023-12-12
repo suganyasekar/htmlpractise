@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <title>FAQ</title>
+</head>
+
+<body>
+    <div class="Main-Container">
+        <div class="title">
+            <h2 class="Ques-heading">General Question</h2>
+        </div>
+        <div class="Question-Container">
+            <article class="Question">
+                <div class="Question-heading">
+                    <p>Do You Accept All Major Credit Cards?</p>
+                    <span class="check-btn">
+                    <i id="add-box" class="ri-add-box-line"></i>
+                    <i id="minus-box" class="ri-checkbox-indeterminate-line question-text"></i>
+                </span>
+                </div>
+                <div  class="question-text">
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dolore illo dolores quia nemo
+                    doloribus
+                    quaerat, magni numquam repellat reprehenderit.</p>
+                </div>
+            </article>
+        </div>
+        <div class="Question-Container">
+            <article class="Question">
+                <div class="Question-heading">
+                    <p>Do You Accept All Major Credit Cards?</p>
+                    <span class="check-btn">
+                    <i id="add-box" class="ri-add-box-line"></i>
+                    <i id="minus-box" class="ri-checkbox-indeterminate-line question-text"></i>
+                </span>
+                </div>
+                <div class="question-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dolore illo dolores quia nemo
+                    doloribus
+                    quaerat, magni numquam repellat reprehenderit.</p>
+                </div>
+            </article>
+        </div>
+        <div class="Question-Container">
+            <article class="Question">
+                <div class="Question-heading">
+                    <p>Do You Accept All Major Credit Cards?</p>
+                    <span class="check-btn">
+                    <i id="add-box" class="ri-add-box-line"></i>
+                    <i id="minus-box" class="ri-checkbox-indeterminate-line question-text"></i>
+                </span>
+                </div>
+                <div  class="question-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dolore illo dolores quia nemo
+                    doloribus
+                    quaerat, magni numquam repellat reprehenderit.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+
+
+    </section>
+
+    <script>
+        const addbox = document.querySelectorAll("#add-box");
+        const answerbox = document.querySelectorAll("#question-text");
+        const minusbox = document.querySelectorAll("#minus-box");
+
+addbox.forEach(element => {
+    element.addEventListener("click",function(e){
+        changing(e);
+        // const question = e.currentTarget.parentElement.parentElement;
+        // const answer = question.nextElementSibling;
+        // if(answer.classList.contains("question-text"))
+        // {
+        //     const minusbox = question.querySelector(".question-text");
+        //     minusbox.classList.toggle("show-text");
+        //     const addbox = question.querySelector("#add-box");
+        //     addbox.style.display = "none";
+        //     answer.classList.toggle("show-text");
+        // }
+
+        });
+    
+});
+
+minusbox.forEach(element=>{
+    element.addEventListener("click",function(e){
+        changing(e);
+        // const question = e.currentTarget.parentElement.parentElement;
+        // const answer = question.nextElementSibling;
+        // console.log(question);
+        // console.log(answer);
+        // if(answer.classList.contains("question-text"))
+        // {
+        //     const minusbox = question.querySelector(".question-text");
+        //     minusbox.classList.toggle("show-text");
+        //     const addbox = question.querySelector("#add-box");
+        //     addbox.classList.toggle("show-text");
+        //     answer.classList.toggle("show-text");
+        // }
+    })
+})
+
+function changing(e)
+{
+    const question = e.currentTarget.parentElement.parentElement;
+        const answer = question.nextElementSibling;
+        if(answer.classList.contains("question-text"))
+        {
+            const minusbox = question.querySelector(".question-text");
+            minusbox.classList.toggle("show-text");
+            const addbox = question.querySelector("#add-box");
+            if(minusbox.classList.contains("show-text"))
+            addbox.style.display = "none";
+            else
+            addbox.style.display="block";
+            answer.classList.toggle("show-text");
+        }
+
+
+}
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <link rel="stylesheet" href="newstyle.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body class="main">
+    <section class="tabs-section">
+        <div class="tabs-heading">
+            <h2>
+                About
+                </h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, aperiam!</p>
+        </div>
+        <div class="tabs-maincontainer">
+            <article class="tabs-conatainer">
+                <img src="image/hero-bcg.jpeg" class="tab-logo" />
+            </article>
+            <article class="content-article">
+                <div style="border-bottom: none;" class="nav-article">
+                    <button class="tab-btn active" data-id="history">history</button>
+                    <button class="tab-btn" data-id="vision">Vision</button>
+                    <button class="tab-btn" data-id="goals">Goals</button>
+
+                </div>
+           
+
+                <div class="about-container">
+                    <div id="history" class="content active">
+                        <h3>History</h3>
+                        <p>
+                            I'm baby wolf pickled schlitz try-hard normcore marfa man bun mumblecore vice pop-up XOXO
+                            lomo kombucha glossier bicycle rights. Umami kinfolk salvia jean shorts offal venmo.
+                            Knausgaard tilde try-hard, woke fixie banjo man bun. Small batch tumeric mustache tbh
+                            wayfarers 8-bit shaman chartreuse tacos. Viral direct trade hoodie ugh chambray, craft beer
+                            pork belly flannel tacos single-origin coffee art party migas plaid pop-up.
+                        </p>
+                    </div>
+                    <div id="vision" class="content">
+                        <h3>Vision</h3>
+                        <p>
+                         Man bun PBR&B keytar copper mug prism, hell of helvetica. Synth crucifix offal deep v hella biodiesel. Church-key listicle polaroid put a bird on it chillwave palo santo enamel pin, tattooed meggings franzen la croix cray. Retro yr aesthetic four loko tbh helvetica air plant, neutra palo santo tofu mumblecore. Hoodie bushwick pour-over jean shorts chartreuse shabby chic. Roof party hammock master cleanse pop-up truffaut, bicycle rights skateboard affogato readymade sustainable deep v live-edge schlitz narwhal.
+                        </p>
+                    </div>
+                    <div id="goals"class="content">
+                        <h3>Goals</h3>
+                        <p>
+                        Chambray authentic truffaut, kickstarter brunch taxidermy vape heirloom four dollar toast raclette shoreditch church-key. Poutine etsy tote bag, cred fingerstache leggings cornhole everyday carry blog gastropub. Brunch biodiesel sartorial mlkshk swag, mixtape hashtag marfa readymade direct trade man braid cold-pressed roof party. Small batch adaptogen coloring book heirloom. Letterpress food truck hammock literally hell of wolf beard adaptogen everyday carry. Dreamcatcher pitchfork yuccie, banh mi salvia venmo photo booth quinoa chicharrones.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    
+
+
+        </div>
+    </section>
+
+    <script>
+        const abt = document.querySelector(".content-article");
+        const btn = document.querySelectorAll(".tab-btn");
+        const article = document.querySelectorAll(".content");
+
+        abt.addEventListener("click",function(e){
+           const id = e.target.dataset.id;
+           if(id)
+           {
+            btn.forEach(function(b){
+                b.classList.remove("active");
+                e.target.classList.add("active");
+            })
+            article.forEach(function(c){
+                c.classList.remove("active");
+            })
+            const para = document.getElementById(id);
+            
+            para.classList.add("active");
+           }
+        });
+    </script>
+
+</body>
+
+</html>

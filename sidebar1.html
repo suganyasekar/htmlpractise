@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>sidebar</title>
+        <!-- font awesome  -->
+        <link
+          rel="stylesheet"
+          href="./fontawesome-free-5.12.0-web/css/all.min.css"
+        />
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    
+        <!-- styles -->
+        <link rel="stylesheet" href="styles.css" />
+      </head>
+<body>
+    <button id="close-toogle" class="sidebar-toggle">
+        <i class="ri-dashboard-fill"></i>
+    </button>
+        <aside id="sidebar" class="sidebar"> 
+            <div class="sidebar-header">
+            <img src="https://raw.githubusercontent.com/john-smilga/javascript-basic-projects/ff3cdf1fb023f2aba73fed37b56721ec6114f11b/04-navbar/setup/logo.svg" class="logo" alt="logo" />
+            <button id="close-btn" class="close-btn"> 
+                <i class="ri-close-line"></i>
+            </button>
+        </div>
+        <ul id="links" class="links side-links">
+            <li>
+              <a href="index.html">home</a>
+            </li>
+            <li>
+              <a href="about.html">about</a>
+              
+            </li>
+            <li>
+              <a href="projects.html">projects</a>
+            </li>
+            <li>
+              <a href="contact.html">contact</a>
+            </li>
+          </ul>
+        </aside>
+
+
+        <script>
+            const closebtn = document.getElementById("close-btn");
+            const btntoggle = document.getElementById("close-toogle");
+            const sidebar = document.getElementById("sidebar");
+            
+
+            closebtn.addEventListener("click",function(){
+                
+                sidebar.classList.add("toggle");
+                btntoggle.style.display = "block";
+                });
+
+                btntoggle.addEventListener("click",function(){
+                    sidebar.classList.toggle("toggle");
+
+                });
+        </script>
+    
+</body>
+</html>

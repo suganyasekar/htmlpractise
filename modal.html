@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Modal Project</title>
+</head>
+<body>
+    <div class="Main-container">
+        <div class="hero">
+            <h1>Modal Project</h1>
+            <button id="btnmodal" class="btn-modal">Open Modal</button>
+        </div>
+        <div id="Modal-box" class="Modal-box over-lay">
+            <div class="banner">
+                <h3>Modal Box</h3>
+                <button id="btn-modelclose" class="btn-modelclose"> <i class="ri-close-line"></i></button>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        const openmodal = document.getElementById("btnmodal");
+        const closebtn = document.getElementById("btn-modelclose");
+        const Modal = document.getElementById("Modal-box");
+
+        openmodal.addEventListener("click",function(){
+
+            // Modal.classList.add("visible");
+            Modal.style.visibility = "visible";
+        })
+
+        closebtn.addEventListener("click",function(){
+            Modal.style.visibility = "hidden";
+        })
+    </script>
+    
+</body>
+</html>
